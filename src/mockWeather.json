@@ -1,0 +1,26 @@
+[
+  {
+    "date": { "day": "Wednesday", "date": "7.12.22" },
+    "status": "snow",
+    "max": 16,
+    "min": 13
+  },
+  {
+    "date": { "day": "Thursday", "date": "8.12.22" },
+    "status": "rainy",
+    "max": 16,
+    "min": 13
+  },
+  {
+    "date": { "day": "Friday", "date": "9.12.22" },
+    "status": "overcast",
+    "max": 16,
+    "min": 13
+  },
+  {
+    "date": { "day": "Saturday", "date": "10.12.22" },
+    "status": "fewClouds",
+    "max": 16,
+    "min": 13
+  }
+]

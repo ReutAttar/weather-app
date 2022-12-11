@@ -1,0 +1,194 @@
+[
+  {
+    "DateTime": "2022-12-07T19:00:00+02:00",
+    "EpochDateTime": 1670432400,
+    "WeatherIcon": 36,
+    "IconPhrase": "Intermittent clouds",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 12.6,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=1&hbhhour=19&unit=c&lang=en-us",
+    "Link": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=1&hbhhour=19&unit=c&lang=en-us"
+  },
+  {
+    "DateTime": "2022-12-07T20:00:00+02:00",
+    "EpochDateTime": 1670436000,
+    "WeatherIcon": 36,
+    "IconPhrase": "Intermittent clouds",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 11.3,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=1&hbhhour=20&unit=c&lang=en-us",
+    "Link": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=1&hbhhour=20&unit=c&lang=en-us"
+  },
+  {
+    "DateTime": "2022-12-07T21:00:00+02:00",
+    "EpochDateTime": 1670439600,
+    "WeatherIcon": 35,
+    "IconPhrase": "Partly cloudy",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 11,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=1&hbhhour=21&unit=c&lang=en-us",
+    "Link": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=1&hbhhour=21&unit=c&lang=en-us"
+  },
+  {
+    "DateTime": "2022-12-07T22:00:00+02:00",
+    "EpochDateTime": 1670443200,
+    "WeatherIcon": 34,
+    "IconPhrase": "Mostly clear",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 10.5,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=1&hbhhour=22&unit=c&lang=en-us",
+    "Link": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=1&hbhhour=22&unit=c&lang=en-us"
+  },
+  {
+    "DateTime": "2022-12-07T23:00:00+02:00",
+    "EpochDateTime": 1670446800,
+    "WeatherIcon": 33,
+    "IconPhrase": "Clear",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 10.1,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=1&hbhhour=23&unit=c&lang=en-us",
+    "Link": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=1&hbhhour=23&unit=c&lang=en-us"
+  },
+  {
+    "DateTime": "2022-12-08T00:00:00+02:00",
+    "EpochDateTime": 1670450400,
+    "WeatherIcon": 33,
+    "IconPhrase": "Clear",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 9.7,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=2&hbhhour=0&unit=c&lang=en-us",
+    "Link": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=2&hbhhour=0&unit=c&lang=en-us"
+  },
+  {
+    "DateTime": "2022-12-08T01:00:00+02:00",
+    "EpochDateTime": 1670454000,
+    "WeatherIcon": 34,
+    "IconPhrase": "Mostly clear",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 9.5,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=2&hbhhour=1&unit=c&lang=en-us",
+    "Link": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=2&hbhhour=1&unit=c&lang=en-us"
+  },
+  {
+    "DateTime": "2022-12-08T02:00:00+02:00",
+    "EpochDateTime": 1670457600,
+    "WeatherIcon": 34,
+    "IconPhrase": "Mostly clear",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 8.8,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=2&hbhhour=2&unit=c&lang=en-us",
+    "Link": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=2&hbhhour=2&unit=c&lang=en-us"
+  },
+  {
+    "DateTime": "2022-12-08T03:00:00+02:00",
+    "EpochDateTime": 1670461200,
+    "WeatherIcon": 34,
+    "IconPhrase": "Mostly clear",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 9.5,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=2&hbhhour=3&unit=c&lang=en-us",
+    "Link": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=2&hbhhour=3&unit=c&lang=en-us"
+  },
+  {
+    "DateTime": "2022-12-08T04:00:00+02:00",
+    "EpochDateTime": 1670464800,
+    "WeatherIcon": 34,
+    "IconPhrase": "Mostly clear",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 9.7,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=2&hbhhour=4&unit=c&lang=en-us",
+    "Link": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=2&hbhhour=4&unit=c&lang=en-us"
+  },
+  {
+    "DateTime": "2022-12-08T05:00:00+02:00",
+    "EpochDateTime": 1670468400,
+    "WeatherIcon": 33,
+    "IconPhrase": "Clear",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 9.7,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=2&hbhhour=5&unit=c&lang=en-us",
+    "Link": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=2&hbhhour=5&unit=c&lang=en-us"
+  },
+  {
+    "DateTime": "2022-12-08T06:00:00+02:00",
+    "EpochDateTime": 1670472000,
+    "WeatherIcon": 33,
+    "IconPhrase": "Clear",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 9.8,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=2&hbhhour=6&unit=c&lang=en-us",
+    "Link": "http://www.accuweather.com/en/il/jerusalem/213225/hourly-weather-forecast/213225?day=2&hbhhour=6&unit=c&lang=en-us"
+  }
+]

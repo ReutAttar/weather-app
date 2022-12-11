@@ -1,38 +1,46 @@
+@import "~antd/dist/reset.css";
+
+/* make responsive */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0 auto;
+  width: 100%;
+  /* max-width: 1240px; */
+  /* min-width: 350px; */
+  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.select-container {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.current-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.select {
+  height: 40px;
+  font-size: 30px;
+  margin: 5px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
 }
