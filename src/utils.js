@@ -19,6 +19,24 @@ const icons = {
   // overcast,
 };
 
+const weekday = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
 export const getIcon = (iconNumber) => {
   return icons[iconNumber];
+};
+
+export const getWeekday = (day) => {
+  return weekday[day];
+};
+
+export const padTo2Digits = (num) => {
+  return String(num).padStart(2, "0");
 };

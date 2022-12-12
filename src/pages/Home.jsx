@@ -8,22 +8,9 @@ import mockCurrent from "../mockCurrentConditions.json";
 import mockHours from "../mockTwelveHoursForecast.json"
 
 const Home = () => {
-  const selectOptions = (
-    <select className="select" placeholder="please select city">
-      <option>Jerusalem</option>
-      <option>Tel Aviv</option>
-      <option>Haifa</option>
-      <option>Beer Sheva</option>
-      <option>Kiryat Shmona</option>
-      <option>Tiberias</option>
-      <option>Eilat</option>
-    </select>
-  );
-
   return (
     <div className="main-container">
       <Header />
-      <div className="select-container">{selectOptions}</div>
       <div className="current-container">
         {<CurrentDayCard
           data={mockCurrent[0]}

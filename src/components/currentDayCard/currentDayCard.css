@@ -1,9 +1,9 @@
-.card {
+.currentCard {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 10%;
-  min-height: 280px;
+  min-width: 200px;
+  min-height: 255px;
   border-radius: 10px;
   margin: 0 30px;
   padding: 10px;
@@ -15,7 +15,7 @@
 }
 
 .day {
-  font-size: 32px;
+  font-size: 28px;
   margin-bottom: 5px;
 }
 
