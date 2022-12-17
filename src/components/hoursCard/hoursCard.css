@@ -15,3 +15,10 @@
   align-items: center;
   justify-content: center;
 }
+
+.temp{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

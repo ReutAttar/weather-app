@@ -1,0 +1,18 @@
+.current-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.loader{
+  margin-top:  20px;
+}
+
+.ant-spin .ant-spin-dot-item {
+  background-color: #fff;
+}
+
+.ant-spin {
+  color: #fff;
+}

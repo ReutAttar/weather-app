@@ -22,11 +22,18 @@
 .icon {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
-.temp {
+.temps-row {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-content: center;
+  align-items: center;
+}
+
+.max , .min {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }

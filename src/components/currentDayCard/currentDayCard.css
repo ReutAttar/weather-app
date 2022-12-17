@@ -22,21 +22,28 @@
 .icon {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 .info {
   text-align: center;
 }
-.temp {
+.temps {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-content: center;
+  align-items: center;
 }
 .currentTemp,
 .feelsLike {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-content: center;
+  align-items: center;
+}
+
+.temp{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }

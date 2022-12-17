@@ -4,10 +4,13 @@ import { Switch as SwitchButton } from "antd"
 import darkIcon from "../../assets/icons/clear-night.svg"
 import lightIcon from "../../assets/icons/clear-day.svg"
 import ThemeContext, { themes } from "../../contexts/themeContext";
+import { toggleTempUnits } from "../../redux/weatherSlice";
+import { useDispatch } from 'react-redux'
 import Select from "../select/select"
 
 const Header = () => {
     const [theme, setTheme] = useContext(ThemeContext);
+    const dispatch = useDispatch();
     return (
         <div className="header">
             <SwitchButton
@@ -29,6 +32,12 @@ const Header = () => {
                 }
                 style={{ background: "#00000040", margin: "30px 0 0 30px", minWidth: "60px", height: "30px" }}
                 onChange={(checked) => (checked ? setTheme(themes.dark) : setTheme(themes.light))}
+            />
+            <SwitchButton
+                checkedChildren={'F'}
+                unCheckedChildren={'C'}
+                style={{ background: "#00000040", margin: "30px 0 0 30px", minWidth: "60px", height: "30px" }}
+                onChange={(checked) => (checked ? dispatch(toggleTempUnits()) : dispatch(toggleTempUnits()))}
             />
             <div className="container">
             <div className="title">Weather by city</div>

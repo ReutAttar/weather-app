@@ -1,30 +1,22 @@
-import React from "react";
-import DayCard from "../components/dayCard/dayCard";
+import React, { useEffect } from "react";
 import Header from "../components/header/header";
-import CurrentDayCard from "../components/currentDayCard/currentDayCard";
-import HoursCard from "../components/hoursCard/hoursCard";
-import mock5Days from "../mockFiveDaysForecast.json";
-import mockCurrent from "../mockCurrentConditions.json";
-import mockHours from "../mockTwelveHoursForecast.json"
+import Forecast from "../components/forecast/forecast";
+import CurrentForecast from "../components/currentForecast/currentForecast";
+import { useDispatch } from 'react-redux'
+import { setSelectedCity } from "../redux/weatherSlice"
 
 const Home = () => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(setSelectedCity({ label: 'Tel Aviv, Israel', value: 215854 }))
+  }, []);
+
   return (
     <div className="main-container">
       <Header />
-      <div className="current-container">
-        {<CurrentDayCard
-          data={mockCurrent[0]}
-        />}
-        {<HoursCard data={mockHours} />}
-      </div>
-      <div className="cards">
-        {mock5Days.DailyForecasts.map((data, index) => (
-          <DayCard
-            key={index}
-            data={data}
-          />
-        ))}
-      </div>
+      <CurrentForecast />
+      <Forecast />
     </div>
   );
 };

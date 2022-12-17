@@ -1,9 +1,13 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useCallback } from "react";
 import AsyncSelect from 'react-select/async';
 import { FETCH_CITIES } from "../../apis/apis";
 import useDebounce from "../../hooks/useDebounce";
+import { useDispatch, useSelector } from 'react-redux'
+import { setSelectedCity } from "../../redux/weatherSlice"
 
 const Select = () => {
+    const { selectedCity } = useSelector((state) => state.weather);
+    const dispatch = useDispatch()
 
     const loadOptions = useCallback(
         useDebounce((inputValue, callback) => {
@@ -30,6 +34,8 @@ const Select = () => {
             isClearable
             cacheOptions
             loadOptions={loadOptions}
+            onChange={(option) => dispatch(setSelectedCity(option))}
+            value={selectedCity}
         />
     )
 }
