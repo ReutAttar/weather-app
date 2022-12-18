@@ -1,15 +1,14 @@
-import React, { useContext } from "react";
+import React from "react";
 import { getIcon, padTo2Digits, getTempUnitIcon } from "../../utils";
 import "./hoursCard.css"
-import ThemeContext from "../../contexts/themeContext";
 import { useSelector } from 'react-redux'
 
 const HoursCard = ({ data }) => {
-  const [theme] = useContext(ThemeContext);
   const { tempUnits } = useSelector((state) => state.weather);
+  const { darkModeOn } = useSelector((state) => state.darkMode);
 
   return (
-    <div className="hours-card" style={{ backgroundColor: theme.cardBackgroundColor, color: theme.textColor }}>
+    <div className={`hours-card ${darkModeOn ? "dark" : "light"}`}>
       {data.map((object, index) => {
         const date = new Date(object.DateTime)
         const hour = `${padTo2Digits(date.getUTCHours())}:${padTo2Digits(date.getUTCMinutes())}`
@@ -22,7 +21,7 @@ const HoursCard = ({ data }) => {
             </div>
             <div className="temp">
               {Math.round(object.Temperature.Value)}
-              {getTempUnitIcon(tempUnits)}
+              {getTempUnitIcon(tempUnits, darkModeOn)}
             </div>
           </div>
         )

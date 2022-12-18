@@ -25,8 +25,8 @@ import partlyCloudyStormNight from "./assets/icons/thunderstorms-night-rain.svg"
 import partlyCloudySnowNight from "./assets/icons/thunderstorms-snow.svg";
 import fogNight from "./assets/icons/fog-night.svg";
 
-import f from "./assets/icons/fahrenheit.svg"
-import c from "./assets/icons/celsius.svg"
+import { ReactComponent as C } from './assets/icons/celsius.svg';
+import { ReactComponent as F } from './assets/icons/fahrenheit.svg';
 
 const icons = {
   1: sunny,
@@ -91,8 +91,9 @@ export const padTo2Digits = (num) => {
   return String(num).padStart(2, "0");
 };
 
-export const getTempUnitIcon = (tempUnit) => {
+export const getTempUnitIcon = (tempUnit, darkModeOn) => {
+  const fill = darkModeOn ? "#ffffff" : "#000000"
   return (
-    <img src={tempUnit === 'Metric' ? c : f} alt={"temp unit icon"} width={40} height={40} />
+    tempUnit === 'Metric' ? <C width={40} height={40} fill={fill} /> : <F width={40} height={40} fill={"#438ac9"} />
   )
 }

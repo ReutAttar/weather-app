@@ -10,7 +10,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(setSelectedCity({ label: 'Tel Aviv, Israel', value: 215854 }))
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="main-container">

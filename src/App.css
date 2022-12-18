@@ -20,6 +20,13 @@ body {
   align-items: center;
 }
 
+.light {
+  color: #000000;
+  background-color: #ffffffa3;
+}
 
-
+.dark {
+  color: #ffffff;
+  background-color: #0000005c;
+}
 
