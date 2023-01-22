@@ -94,6 +94,6 @@ export const padTo2Digits = (num) => {
 export const getTempUnitIcon = (tempUnit, darkModeOn) => {
   const fill = darkModeOn ? "#ffffff" : "#000000"
   return (
-    tempUnit === 'Metric' ? <C width={40} height={40} fill={fill} /> : <F width={40} height={40} fill={"#438ac9"} />
+    tempUnit === 'Metric' ? <C width={40} height={40} fill={fill} /> : <F width={40} height={40} fill={fill} />
   )
 }

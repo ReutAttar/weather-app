@@ -56,7 +56,8 @@ const CurrentForecast = () => {
 
     return (
         <div className="current-container">
-            {loading ? error ? "Something went wrong" : <div className='loader'> <Spin tip="Loading" size="large" /> </div> :
+            {loading ? <div className='loader'> <Spin tip="Loading" size="large" /> </div> :
+                error ? "Something went wrong" :
                 <>
                     <CurrentDayCard data={currentWeather} />
                     <HoursCard data={twelveHoursForecast} />

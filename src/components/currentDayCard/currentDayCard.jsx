@@ -4,7 +4,7 @@ import { getIcon, getWeekday, padTo2Digits, getTempUnitIcon } from "../../utils"
 import { useSelector } from 'react-redux'
 
 
-const CurrentDayCard = ({ data }) => {
+const CurrentDayCard = ({ data, city }) => {
   const { tempUnits } = useSelector((state) => state.weather);
   const { darkModeOn } = useSelector((state) => state.darkMode);
   const icon = getIcon(data.WeatherIcon);
@@ -18,6 +18,7 @@ const CurrentDayCard = ({ data }) => {
 
   return (
     <div className={`currentCard ${darkModeOn ? "dark" : "light"}`} >
+      {city && <div className="city">{city.split(',')[0]}</div>}
       <div className="date-container">
         <div className="day">{day}</div>
         <div className="date">{currentTime}</div>

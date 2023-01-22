@@ -1,0 +1,14 @@
+.favorites-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: white;;
+  }
+  .favorite-card{
+    transition: .3s;
+    cursor: pointer;
+  }
+  .favorite-card:hover {
+    transform: scale(1.1);
+  }

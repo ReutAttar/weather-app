@@ -1,15 +1,29 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Home from "./pages/Home";
-import dayBackground from "./assets/images/cloud-blue-sky.jpg";
+import Favorites from "./pages/favorite/Favorites";
+import dayBackground from "./assets/images/day-sky.jpg";
 import nightBackground from "./assets/images/night-sky.jpg";
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+
+import { Switch as SwitchButton } from "antd"
+import darkIcon from "./assets/icons/clear-night.svg"
+import lightIcon from "./assets/icons/clear-day.svg"
+import { toggleTempUnits } from "./redux/weatherSlice";
+import { toggleDarkMode } from "./redux/darkModeSlice"
 
 function App() {
   const [backgroundImage, setBackgroundImage] = useState(dayBackground);
   const { isDayTime } = useSelector((state) => state.weather);
   const { darkModeOn } = useSelector((state) => state.darkMode);
-  const backgroundImageColor = "linear-gradient(rgb(8, 14, 44), rgb(8 14 44 / 86%), rgba(8, 14, 44, 0.8), rgba(8, 14, 44, 0.7), rgba(8, 14, 44, 0.3))"
+  const backgroundImageColor = "linear-gradient(rgb(8, 14, 44, 0.75), rgba(8, 14, 44, 0.7), rgba(8, 14, 44, 0.6), rgba(8, 14, 44, 0.3))"
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (!isDayTime) {
@@ -27,7 +41,55 @@ function App() {
           height: "100vh",
         }}
       >
-        <Home />
+      <Router>
+        <div className="navigation">
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/favorites">Favorites</Link>
+              </li>
+            </ul>
+          </nav>
+
+          <div>
+            <SwitchButton
+              checkedChildren={
+                <img
+                  src={darkIcon}
+                  alt="moonIcon"
+                  width="25"
+                  height="25"
+                />
+              }
+              unCheckedChildren={
+                <img
+                  src={lightIcon}
+                  alt="sunIcon"
+                  width="25"
+                  height="25"
+                />
+              }
+              style={{ background: "#00000040", minWidth: "60px", height: "30px" }}
+              onChange={(checked) => (checked ? dispatch(toggleDarkMode()) : dispatch(toggleDarkMode()))}
+            />
+            <SwitchButton
+              checkedChildren={'F'}
+              unCheckedChildren={'C'}
+              style={{ background: "#00000040", margin: '0 30px 0 30px', minWidth: "60px", height: "30px" }}
+              onChange={(checked) => (checked ? dispatch(toggleTempUnits()) : dispatch(toggleTempUnits()))}
+            />
+          </div>
+        </div>
+
+        <Routes>
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
+
     </div>
   );
 }
