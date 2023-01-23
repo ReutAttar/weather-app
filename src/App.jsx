@@ -38,7 +38,8 @@ function App() {
         style={{
         backgroundImage: darkModeOn ? `${backgroundImageColor} ,url(${backgroundImage})` : `url(${backgroundImage})`,
           backgroundSize: "cover",
-          height: "100vh",
+        backgroundRepeat: "no-repeat",
+        minHeight: "100vh",
         }}
       >
       <Router>
@@ -54,7 +55,7 @@ function App() {
             </ul>
           </nav>
 
-          <div>
+          <div className="switch-buttons">
             <SwitchButton
               checkedChildren={
                 <img
