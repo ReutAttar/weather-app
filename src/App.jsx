@@ -1,22 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Home from "./pages/Home";
-import Favorites from "./pages/favorite/Favorites";
 import dayBackground from "./assets/images/day-sky.jpg";
 import nightBackground from "./assets/images/night-sky.jpg";
 import { useDispatch, useSelector } from 'react-redux'
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
-
-import { Switch as SwitchButton } from "antd"
-import darkIcon from "./assets/icons/clear-night.svg"
-import lightIcon from "./assets/icons/clear-day.svg"
-import { toggleTempUnits } from "./redux/weatherSlice";
-import { toggleDarkMode } from "./redux/darkModeSlice"
+import { BrowserRouter as Router } from "react-router-dom";
+import { loadFavoritesFromStorage } from "./redux/weatherSlice";
+import Header from "./components/header/Header";
+import RoutesComponent from "./Routes";
 
 function App() {
   const [backgroundImage, setBackgroundImage] = useState(dayBackground);
@@ -33,62 +23,23 @@ function App() {
 
   }, [isDayTime])
 
+  useEffect(() => {
+    const favorites = JSON.parse(localStorage.getItem("favoriteCities"));
+    if (favorites && favorites.length > 0) {
+      dispatch(loadFavoritesFromStorage(favorites))
+    }
+  }, [])
+
   return (
       <div
+      className="background-image"
         style={{
-        backgroundImage: darkModeOn ? `${backgroundImageColor} ,url(${backgroundImage})` : `url(${backgroundImage})`,
-          backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        minHeight: "100vh",
+          backgroundImage: darkModeOn ? `${backgroundImageColor} ,url(${backgroundImage})` : `url(${backgroundImage})`,
         }}
       >
       <Router>
-        <div className="navigation">
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/favorites">Favorites</Link>
-              </li>
-            </ul>
-          </nav>
-
-          <div className="switch-buttons">
-            <SwitchButton
-              checkedChildren={
-                <img
-                  src={darkIcon}
-                  alt="moonIcon"
-                  width="25"
-                  height="25"
-                />
-              }
-              unCheckedChildren={
-                <img
-                  src={lightIcon}
-                  alt="sunIcon"
-                  width="25"
-                  height="25"
-                />
-              }
-              style={{ background: "#00000040", minWidth: "60px", height: "30px" }}
-              onChange={(checked) => (checked ? dispatch(toggleDarkMode()) : dispatch(toggleDarkMode()))}
-            />
-            <SwitchButton
-              checkedChildren={'F'}
-              unCheckedChildren={'C'}
-              style={{ background: "#00000040", margin: '0 30px 0 30px', minWidth: "60px", height: "30px" }}
-              onChange={(checked) => (checked ? dispatch(toggleTempUnits()) : dispatch(toggleTempUnits()))}
-            />
-          </div>
-        </div>
-
-        <Routes>
-          <Route path="/favorites" element={<Favorites />} />
-          <Route path="/" element={<Home />} />
-        </Routes>
+        <Header />
+        <RoutesComponent />
       </Router>
 
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { getIcon, padTo2Digits, getTempUnitIcon } from "../../utils";
-import "./hoursCard.css"
+import "./HoursCard.css"
 import { useSelector } from 'react-redux'
 
 const HoursCard = ({ data }) => {

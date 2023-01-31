@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import './currentForecast.css'
+import './CurrentForecast.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { FETCH_TWELVE_HOURS_FORECAST, FETCH_CURRENT_FORECAST } from "../../apis/apis";
 import { setCurrentWeather, setTwelveHoursForecast, setIsDayTime } from "../../redux/weatherSlice";
-import CurrentDayCard from '../currentDayCard/currentDayCard';
-import HoursCard from '../hoursCard/hoursCard';
+import CurrentDayCard from '../currentDayCard/CurrentDayCard';
+import HoursCard from '../hoursCard/HoursCard';
 import { Spin } from 'antd';
+import { getErrorMessage } from '../../utils';
 
 const CurrentForecast = () => {
     const [loading, setLoading] = useState(true);
@@ -57,7 +58,7 @@ const CurrentForecast = () => {
     return (
         <div className="current-container">
             {loading ? <div className='loader'> <Spin tip="Loading" size="large" /> </div> :
-                error ? "Something went wrong" :
+                error ? getErrorMessage() :
                 <>
                     <CurrentDayCard data={currentWeather} />
                     <HoursCard data={twelveHoursForecast} />

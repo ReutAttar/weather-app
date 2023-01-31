@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import Header from "../components/header/header";
-import Forecast from "../components/forecast/forecast";
-import CurrentForecast from "../components/currentForecast/currentForecast";
+import SearchHeader from "../components/searchHeader/SearchHeader";
+import Forecast from "../components/forecast/Forecast";
+import CurrentForecast from "../components/currentForecast/CurrentForecast";
 import { useDispatch, useSelector } from 'react-redux'
 import { setSelectedCity } from "../redux/weatherSlice"
 
@@ -11,11 +11,11 @@ const Home = () => {
 
   useEffect(() => {
     !selectedCity.value && dispatch(setSelectedCity({ label: 'Tel Aviv, Israel', value: 215854 }))
-  }, [dispatch]);
+  }, [selectedCity, dispatch]);
 
   return (
     <div className="main-container">
-      <Header />
+      <SearchHeader />
       <CurrentForecast />
       <Forecast />
     </div>

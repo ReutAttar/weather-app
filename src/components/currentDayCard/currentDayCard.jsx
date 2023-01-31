@@ -1,5 +1,5 @@
 import React from "react";
-import "./currentDayCard.css";
+import "./CurrentDayCard.css";
 import { getIcon, getWeekday, padTo2Digits, getTempUnitIcon } from "../../utils";
 import { useSelector } from 'react-redux'
 
@@ -17,8 +17,10 @@ const CurrentDayCard = ({ data, city }) => {
   const day = getWeekday(date.getDay());
 
   return (
-    <div className={`currentCard ${darkModeOn ? "dark" : "light"}`} >
+    <div className={`current-card ${darkModeOn ? "dark" : "light"}`} >
+
       {city && <div className="city">{city.split(',')[0]}</div>}
+
       <div className="date-container">
         <div className="day">{day}</div>
         <div className="date">{currentTime}</div>
@@ -28,7 +30,7 @@ const CurrentDayCard = ({ data, city }) => {
       </div>
       <div className="info">{data.WeatherText}</div>
       <div className="temps">
-        <div className="currentTemp">
+        <div className="current-temp">
           <div>
             current temp
           </div>
@@ -37,7 +39,7 @@ const CurrentDayCard = ({ data, city }) => {
             {getTempUnitIcon(tempUnits, darkModeOn)}
           </div>
         </div>
-        <div className="feelsLike">
+        <div className="feels-like">
           <div>
             feels like
           </div>

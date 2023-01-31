@@ -97,3 +97,9 @@ export const getTempUnitIcon = (tempUnit, darkModeOn) => {
     tempUnit === 'Metric' ? <C width={40} height={40} fill={fill} /> : <F width={40} height={40} fill={fill} />
   )
 }
+
+export const getErrorMessage = () => {
+  return <div style={{ "marginTop": "15px", "textAlign": "center", "fontSize": "20px" }}>
+    Something went wrong, please try again later
+  </div>
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./dayCard.css";
+import "./DayCard.css";
 import { getIcon, getWeekday, getTempUnitIcon } from "../../utils";
 import { useSelector } from 'react-redux'
 import { Tooltip } from 'antd';

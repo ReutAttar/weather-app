@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import CurrentDayCard from "../../components/currentDayCard/currentDayCard";
+import CurrentDayCard from "../../components/currentDayCard/CurrentDayCard";
 import { useSelector, useDispatch } from 'react-redux'
 import { setSelectedCity } from "../../redux/weatherSlice"
 import { FETCH_CURRENT_FORECAST } from "../../apis/apis";
 import { Spin } from 'antd';
 import "./Favorites.css"
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { getErrorMessage } from "../../utils";
 
 const Favorites = () => {
     const { favoriteCities } = useSelector((state) => state.weather);
@@ -39,7 +40,6 @@ const Favorites = () => {
     }, [favoriteCities])
 
     const onCardClick = (cityValue) => {
-
         dispatch(setSelectedCity(cityValue))
         navigate('/')
     }
@@ -49,7 +49,7 @@ const Favorites = () => {
             {
                 favoriteCities.length === 0 ? "No favorites cities" :
                     loading ? <div className='loader'> <Spin tip="Loading" size="large" /> </div> :
-                        error ? "Something went wrong" :
+                        error ? getErrorMessage() :
                             favoritesForecast.map((forecast, index) =>
                                 <div className="favorite-card" key={index} onClick={() => onCardClick(favoriteCities[index])}>
                                     <CurrentDayCard data={forecast} city={favoriteCities[index].label} />

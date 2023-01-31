@@ -34,15 +34,18 @@ export const weatherSlice = createSlice({
         },
         addToFavorites: (state, action) => {
             state.favoriteCities.push(action.payload);
-            localStorage.setItem("favoriteCities", state.favoriteCities)
+            localStorage.setItem("favoriteCities", JSON.stringify(state.favoriteCities))
         },
         removeFromFavorites: (state, action) => {
             const index = state.favoriteCities.findIndex((city) => city.value === action.payload.value)
             if (index !== -1) {
                 state.favoriteCities.splice(index)
-                localStorage.setItem("favoriteCities", state.favoriteCities)
+                localStorage.setItem("favoriteCities", JSON.stringify(state.favoriteCities))
             }
         },
+        loadFavoritesFromStorage: (state, action) => {
+            state.favoriteCities = action.payload
+        }
     },
 })
 
@@ -55,7 +58,8 @@ export const {
     toggleTempUnits,
     setIsDayTime,
     addToFavorites,
-    removeFromFavorites
+    removeFromFavorites,
+    loadFavoritesFromStorage
 } = weatherSlice.actions
 
 export default weatherSlice.reducer
