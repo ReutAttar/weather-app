@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 import Favorites from "./pages/favorites/Favorites";
 import { Routes, Route } from "react-router-dom";
 

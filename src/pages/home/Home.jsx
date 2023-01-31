@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import SearchHeader from "../components/searchHeader/SearchHeader";
-import Forecast from "../components/forecast/Forecast";
-import CurrentForecast from "../components/currentForecast/CurrentForecast";
+import SearchHeader from "../../components/searchHeader/SearchHeader";
+import Forecast from "../../components/forecast/Forecast";
+import CurrentForecast from "../../components/currentForecast/CurrentForecast";
 import { useDispatch, useSelector } from 'react-redux'
-import { setSelectedCity } from "../redux/weatherSlice"
+import { setSelectedCity } from "../../redux/weatherSlice"
+import "./Home.css"
 
 const Home = () => {
   const dispatch = useDispatch()

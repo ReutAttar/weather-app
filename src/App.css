@@ -20,12 +20,6 @@ body {
   min-height: 100vh;
 }
 
-.main-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .light {
   color: #000000;
   background-color: #ffffffa3;
